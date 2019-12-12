@@ -12,6 +12,10 @@ import android.widget.TextView;
 import com.example.wanandroidjava.R;
 import com.example.wanandroidjava.common.Config;
 import com.example.wanandroidjava.common.ScrollTop;
+import com.example.wanandroidjava.module.home.fragment.HomeFragment;
+import com.example.wanandroidjava.module.mine.fragment.MineFragment;
+import com.example.wanandroidjava.project.fragment.ProjectFragment;
+import com.example.wanandroidjava.wxarticle.fragment.WxFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -73,11 +77,11 @@ public class MainFragment extends BaseFragment implements ViewPager.OnPageChange
         mPagerAdapter = new FixedFragmentPagerAdapter(getChildFragmentManager());
         vp_tab.setAdapter(mPagerAdapter);
         mPagerAdapter.setFragmentList(
-               // HomeFragment.create(),
-                KnowledgeNavigationFragment.create()
-              //  WxFragment.create(),
-              //  ProjectFragment.create(),
-              //  MineFragment.create()
+                HomeFragment.create(),
+                KnowledgeNavigationFragment.create(),
+                WxFragment.create(),
+                ProjectFragment.create(),
+                MineFragment.create()
         );
         vp_tab.setCurrentItem(0);
         onPageSelected(vp_tab.getCurrentItem());

@@ -15,8 +15,8 @@ import com.example.wanandroidjava.module.main.model.UserPageBean;
 import com.example.wanandroidjava.module.mine.model.AboutMeBean;
 import com.example.wanandroidjava.module.mine.model.CoinRankBean;
 import com.example.wanandroidjava.module.mine.model.CoinRecordBean;
+import com.example.wanandroidjava.module.mine.model.UserInfoBean;
 import com.example.wanandroidjava.module.navigation.model.NaviBean;
-import com.tencent.bugly.crashreport.biz.UserInfoBean;
 
 import java.util.List;
 

@@ -7,6 +7,8 @@ import android.support.v4.view.ViewPager;
 import com.example.wanandroidjava.R;
 import com.example.wanandroidjava.common.Config;
 import com.example.wanandroidjava.common.ScrollTop;
+import com.example.wanandroidjava.module.knowledge.fragment.KnowledgeFragment;
+import com.example.wanandroidjava.module.navigation.fragment.NaviFragment;
 import com.example.wanandroidjava.utils.MagicIndicatorUtils;
 
 import butterknife.BindView;
@@ -55,11 +57,11 @@ public class KnowledgeNavigationFragment extends BaseFragment implements ScrollT
         mAdapter = new FixedFragmentPagerAdapter(getChildFragmentManager());
         mAdapter.setTitles("体系", "导航");
         mAdapter.setFragmentList(
-               // KnowledgeFragment.create(),
-               // NaviFragment.create()
+                KnowledgeFragment.create(),
+                NaviFragment.create()
         );
         vp.setAdapter(mAdapter);
-        MagicIndicatorUtils.commonNavigator(ab.getView(R.id.mi), vp, mAdapter, new SimpleCallback<Integer>(){
+        MagicIndicatorUtils.commonNavigator(ab.getView(R.id.mi), vp, mAdapter, new SimpleCallback<Integer>() {
             @Override
             public void onResult(Integer data) {
                 notifyScrollTop(data);

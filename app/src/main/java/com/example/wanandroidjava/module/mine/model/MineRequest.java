@@ -10,7 +10,6 @@ import com.example.wanandroidjava.http.WanCache;
 import com.example.wanandroidjava.module.main.model.ArticleListBean;
 import com.example.wanandroidjava.module.main.model.CollectionLinkBean;
 import com.example.wanandroidjava.module.main.model.UserPageBean;
-import com.tencent.bugly.crashreport.biz.UserInfoBean;
 
 import java.util.List;
 
