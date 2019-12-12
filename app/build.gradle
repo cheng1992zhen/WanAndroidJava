@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'realm-android'
+apply from: "../module.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.example.wanandroidjava"
-        minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        applicationId rootProject.ext.android.applicationId
+        renderscriptSupportModeEnabled true
+        ndk {
+            abiFilters /*'armeabi' ,*/ 'armeabi-v7a'/*, 'arm64-v8a'*/
+        }
     }
     buildTypes {
         release {
@@ -17,13 +17,27 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    resourcePrefix ""
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor rootProject.ext.dependencies.butterknifeCompiler
+    implementation rootProject.ext.dependencies.cardview
+    implementation rootProject.ext.dependencies.flexbox
+    implementation rootProject.ext.dependencies.realtimeBlurView
+    implementation rootProject.ext.dependencies.agentWeb
+    implementation rootProject.ext.dependencies.banner
+    implementation rootProject.ext.dependencies.persistentCookieJar
+    implementation rootProject.ext.dependencies.revealLayout
+    implementation rootProject.ext.dependencies.keyboardCompat
+    implementation rootProject.ext.dependencies.swipelayout
+    implementation rootProject.ext.dependencies.disklrucache
+    implementation rootProject.ext.dependencies.multiStateView
+    implementation rootProject.ext.dependencies.pictureSelector
+    implementation rootProject.ext.dependencies.buglyCrashreport
+    implementation rootProject.ext.dependencies.crashActivity
+    implementation rootProject.ext.dependencies.heartView
+    implementation rootProject.ext.dependencies.zxingLibrary
+    implementation rootProject.ext.dependencies.tbs
 }
