@@ -15,7 +15,13 @@ import com.example.wanandroidjava.R;
 import com.example.wanandroidjava.event.LoginEvent;
 import com.example.wanandroidjava.event.SettingChangeEvent;
 import com.example.wanandroidjava.module.login.model.LoginBean;
+import com.example.wanandroidjava.module.mine.activity.AboutMeActivity;
+import com.example.wanandroidjava.module.mine.activity.CoinActivity;
 import com.example.wanandroidjava.module.mine.activity.CoinRankActivity;
+import com.example.wanandroidjava.module.mine.activity.CollectionActivity;
+import com.example.wanandroidjava.module.mine.activity.MineShareActivity;
+import com.example.wanandroidjava.module.mine.activity.OpenActivity;
+import com.example.wanandroidjava.module.mine.activity.ReadLaterActivity;
 import com.example.wanandroidjava.module.mine.activity.SettingActivity;
 import com.example.wanandroidjava.module.mine.model.UserInfoBean;
 import com.example.wanandroidjava.module.mine.presenter.MinePresenter;
@@ -298,42 +304,42 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineVie
         switch (v.getId()) {
             default:
                 break;
-//            case R.id.ll_coin:
-//                if (UserUtils.getInstance().doIfLogin(getContext())) {
-//                    CoinActivity.start(getContext());
-//                }
-//                break;
-//            case R.id.civ_user_icon:
-//                if (UserUtils.getInstance().doIfLogin(getContext())) {
-//                    PictureSelectorUtils.ofImage(this, REQUEST_CODE_SELECT_USER_ICON);
-//                }
-//                break;
-//            case R.id.tv_user_name:
-//                if (UserUtils.getInstance().doIfLogin(getContext())) {
-//                }
-//                break;
-//            case R.id.ll_user_id:
-//                UserUtils.getInstance().doIfLogin(getContext());
-//                break;
-//            case R.id.ll_share:
-//                if (UserUtils.getInstance().doIfLogin(getContext())) {
-//                    MineShareActivity.start(getContext());
-//                }
-//                break;
-//            case R.id.ll_collect:
-//                if (UserUtils.getInstance().doIfLogin(getContext())) {
-//                    CollectionActivity.start(getContext());
-//                }
-//                break;
-//            case R.id.ll_read_later:
-//                ReadLaterActivity.start(getContext());
-//                break;
-//            case R.id.ll_about_me:
-//                AboutMeActivity.start(getContext());
-//                break;
-//            case R.id.ll_open:
-//                OpenActivity.start(getContext());
-//                break;
+            case R.id.ll_coin:
+                if (UserUtils.getInstance().doIfLogin(getContext())) {
+                    CoinActivity.start(getContext());
+                }
+                break;
+            case R.id.civ_user_icon:
+                if (UserUtils.getInstance().doIfLogin(getContext())) {
+                    PictureSelectorUtils.ofImage(this, REQUEST_CODE_SELECT_USER_ICON);
+                }
+                break;
+            case R.id.tv_user_name:
+                if (UserUtils.getInstance().doIfLogin(getContext())) {
+                }
+                break;
+            case R.id.ll_user_id:
+                UserUtils.getInstance().doIfLogin(getContext());
+                break;
+            case R.id.ll_share:
+                if (UserUtils.getInstance().doIfLogin(getContext())) {
+                    MineShareActivity.start(getContext());
+                }
+                break;
+            case R.id.ll_collect:
+                if (UserUtils.getInstance().doIfLogin(getContext())) {
+                    CollectionActivity.start(getContext());
+                }
+                break;
+            case R.id.ll_read_later:
+                ReadLaterActivity.start(getContext());
+                break;
+            case R.id.ll_about_me:
+                AboutMeActivity.start(getContext());
+                break;
+            case R.id.ll_open:
+                OpenActivity.start(getContext());
+                break;
             case R.id.ll_setting:
                 SettingActivity.start(getContext());
                 break;

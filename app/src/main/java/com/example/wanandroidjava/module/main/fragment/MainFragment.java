@@ -14,8 +14,8 @@ import com.example.wanandroidjava.common.Config;
 import com.example.wanandroidjava.common.ScrollTop;
 import com.example.wanandroidjava.module.home.fragment.HomeFragment;
 import com.example.wanandroidjava.module.mine.fragment.MineFragment;
-import com.example.wanandroidjava.project.fragment.ProjectFragment;
-import com.example.wanandroidjava.wxarticle.fragment.WxFragment;
+import com.example.wanandroidjava.module.project.fragment.ProjectFragment;
+import com.example.wanandroidjava.module.wxarticle.fragment.WxFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;

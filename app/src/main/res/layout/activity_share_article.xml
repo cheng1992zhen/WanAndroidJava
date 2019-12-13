@@ -101,7 +101,7 @@
         android:textColor="@color/text_third"
         android:textSize="@dimen/text_notes" />
 
-    <per.goweii.wanandroid.widget.WebContainer
+    <com.example.wanandroidjava.widget.WebContainer
         android:id="@+id/wc"
         android:layout_width="0dp"
         android:layout_height="0dp" />
