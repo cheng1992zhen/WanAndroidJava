@@ -69,7 +69,7 @@ public class WanApp extends BaseApp {
         }
         initX5();
         initBugly();
-        //initCrashActivity();
+        initCrashActivity();
     }
 
     private void initX5() {

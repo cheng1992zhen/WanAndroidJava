@@ -1,6 +1,6 @@
 ext {
     android = [
-            applicationId    : "per.goweii.wanandroid",
+            applicationId    : "com.example.wanandroidjava",
             compileSdkVersion: 28,
             minSdkVersion    : 19,
             targetSdkVersion : 28,
